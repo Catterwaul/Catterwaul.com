@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital@0;1&display=swap');
+
+:root {
+    color-scheme: dark;
+    --background: #0b0d0c;
+    --surface: #121613;
+    --text: #d9dfda;
+    --muted: #6f7d76;
+    --accent: #3fd6a8;
+    --accent-glow: rgba(63, 214, 168, 0.55);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background:
+        radial-gradient(ellipse at top, #182420 0%, var(--background) 60%);
+    color: var(--text);
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+main {
+    max-width: 30rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    letter-spacing: 0.05em;
+    color: var(--text);
+    text-shadow: 0 0 24px var(--accent-glow);
+}
+
+.tagline {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--muted);
+}
+
+.links {
+    margin-top: 2.5rem;
+}
+
+.links h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.links h2::before,
+.links h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--muted);
+    opacity: 0.5;
+}
+
+.links h2::before {
+    background: linear-gradient(to left, var(--muted), transparent);
+}
+
+.links h2::after {
+    background: linear-gradient(to right, var(--muted), transparent);
+}
+
+nav {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 1.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.notes-link {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.85rem 2rem;
+    border: 1px solid var(--accent);
+    background: rgba(63, 214, 168, 0.06);
+    color: var(--accent);
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.notes-link:hover {
+    background: rgba(63, 214, 168, 0.14);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
