@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes &amp; Takeaways — Catterwaul</title>
+    <meta name="description" content="Notes and takeaways from what Jessy and Catie are reading, watching, and building.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="notes-main">
+        <h1>Notes &amp; Takeaways</h1>
+        <p class="tagline">Filter the various works we've experienced, scored 0–100.</p>
+
+        <div id="opus-filters" class="opus-filters"></div>
+        <div id="opus-list" class="opus-list"></div>
+        <a class="back-link" href="../index.html">← Back</a>
+    </main>
+
+    <script src="opera/tag.js"></script>
+    <script src="types/video-games/local-coop.js"></script>
+    <script src="types/video-games/vr.js"></script>
+    <script src="types/video-games/single-player.js"></script>
+    <script src="opera/render.js"></script>
+    <script>
+        renderTagFilteredOperaList(
+            document.getElementById("opus-filters"),
+            document.getElementById("opus-list"),
+            mergeSortedByRating(localCoopVideoGames, vrGames, singlePlayerVideoGames),
+        );
+    </script>
+</body>
+</html>
