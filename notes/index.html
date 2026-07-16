@@ -21,12 +21,13 @@
     <script src="types/video-games/local-coop.js"></script>
     <script src="types/video-games/vr.js"></script>
     <script src="types/video-games/single-player.js"></script>
+    <script src="types/movies.js"></script>
     <script src="opera/render.js"></script>
     <script>
         renderTagFilteredOperaList(
             document.getElementById("opus-filters"),
             document.getElementById("opus-list"),
-            mergeSortedByRating(localCoopVideoGames, vrGames, singlePlayerVideoGames),
+            mergeSortedByRating(localCoopVideoGames, vrGames, singlePlayerVideoGames, movies),
         );
     </script>
 </body>

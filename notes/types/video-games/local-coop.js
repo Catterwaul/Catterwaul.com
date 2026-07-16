@@ -15,6 +15,7 @@ const localCoopVideoGames = [
         title: "Resident Evil 5",
         steamAppID: 21690,
         wikipedia: "Resident_Evil_5",
+        tags: [Tag.BodyHorror],
         rating: { catie: 100, jessy: 100 },
     },
     {
@@ -40,6 +41,7 @@ const localCoopVideoGames = [
         title: "Dark Pictures: Little Hope",
         steamAppID: 1194630,
         wikipedia: "Little_Hope_(video_game)",
+        tags: [Tag.FolkHorror],
         rating: { catie: 60, jessy: 60 },
         played: { catie: "2020-11", jessy: "2020-11" },
     },

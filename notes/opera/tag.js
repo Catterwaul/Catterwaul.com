@@ -3,7 +3,12 @@
 // from one place instead of retyping raw strings on every opus.
 const Tag = Object.freeze({
     VideoGame: "Video Game",
+    Movie: "Movie",
     LocalMultiplayer: "Local Multiplayer",
     CooperativeGame: "Cooperative Game",
     VR: "VR",
+    FolkHorror: "Folk Horror",
+    DarkFantasy: "Dark Fantasy",
+    CosmicHorror: "Cosmic Horror",
+    BodyHorror: "Body Horror",
 });
