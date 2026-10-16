@@ -1,0 +1,191 @@
+/* Long-form reading layout for pages under /articles/. Loaded after style.css. */
+
+.article-main {
+    max-width: 40rem;
+    width: 100%;
+    text-align: left;
+}
+
+.article-main h1 {
+    font-size: clamp(1.9rem, 5.5vw, 2.75rem);
+    line-height: 1.15;
+    text-shadow: 0 0 18px var(--accent-glow);
+}
+
+.article-dek {
+    margin-top: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: var(--text);
+}
+
+.article-body {
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 1.65;
+}
+
+.article-body > * + * {
+    margin-top: 1.1rem;
+}
+
+.article-body h2 {
+    margin-top: 2.75rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+.article-dek a,
+.article-body a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(63, 214, 168, 0.4);
+}
+
+.article-dek a:hover,
+.article-body a:hover {
+    border-color: var(--accent);
+}
+
+.article-body ul {
+    padding-left: 1.25rem;
+}
+
+.article-body li + li {
+    margin-top: 0.4rem;
+}
+
+.article-body blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent);
+    font-style: italic;
+    color: var(--muted);
+}
+
+.article-body figure {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.article-body figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.article-body figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--muted);
+}
+
+.article-list {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.article-card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid rgba(63, 214, 168, 0.25);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(63, 214, 168, 0.15);
+}
+
+.article-card h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+}
+
+.article-card p {
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.home-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.home-links .notes-link {
+    margin-top: 0;
+}
+
+/* A photo and the text that describes it, presented as one unit. */
+.article-body .pair {
+    margin: 2.25rem 0;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid rgba(63, 214, 168, 0.25);
+    border-left: 3px solid var(--accent);
+}
+
+.article-body .pair figcaption {
+    margin: 0 0 1.1rem;
+    font-size: inherit;
+    font-style: normal;
+    color: var(--text);
+}
+
+.article-body .pair figcaption p + p {
+    margin-top: 1.1rem;
+}
+
+.pair-image {
+    display: block;
+    cursor: zoom-in;
+    border: none !important;
+}
+
+.pair-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 30rem) {
+    .article-body .pair {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 1rem;
+    }
+}
+
+.before-after {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.article-body .before-after figure {
+    margin: 0;
+}
+
+.photo-label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
